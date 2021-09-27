@@ -1,0 +1,67 @@
+﻿<Window
+    x:Class="SelectionStyle.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SelectionStyle"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:syncfusion="using:Syncfusion.UI.Xaml.Editors"
+    mc:Ignorable="d">
+
+    <Grid x:Name="Root_Grid">
+        <Grid.DataContext>
+            <local:SegmentedViewModel/>
+        </Grid.DataContext>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.Resources>
+            <Style TargetType="Border" x:Key="selectedItemStyle">
+                <Setter Property="Background" Value="Olive"/>
+            </Style>
+        </Grid.Resources>
+
+        <StackPanel Margin="0,40,0,0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock>Segmented control using SelectedSegmentStyle</TextBlock>
+            <syncfusion:SfSegmentedControl x:Name="segmentWithSelectedSegmentStyle"
+                                    Margin="0,20,0,0"              
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    SelectedIndex="2" 
+                                    SelectedSegmentStyle="{StaticResource selectedItemStyle}"
+                                    ItemsSource="{Binding Days}">
+                <syncfusion:SfSegmentedControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <TextBlock Text="{Binding Name}"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </syncfusion:SfSegmentedControl.ItemTemplate>
+            </syncfusion:SfSegmentedControl>
+        </StackPanel>
+
+        <StackPanel Margin="0,40,0,0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock>Segmented control using SelectionAnimationType</TextBlock>
+            <syncfusion:SfSegmentedControl x:Name="segmentWithSelectionAnimationType"
+                                    Margin="0,20,0,0"       
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    SelectedIndex="0"
+                                    ItemsSource="{Binding Days}">
+                <syncfusion:SfSegmentedControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <TextBlock Text="{Binding Name}"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </syncfusion:SfSegmentedControl.ItemTemplate>
+            </syncfusion:SfSegmentedControl>
+        </StackPanel>
+    </Grid>
+</Window>

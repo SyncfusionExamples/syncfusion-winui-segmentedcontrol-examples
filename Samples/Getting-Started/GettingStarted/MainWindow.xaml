@@ -1,0 +1,64 @@
+﻿<Window
+    x:Class="GettingStarted.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GettingStarted"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:syncfusion="using:Syncfusion.UI.Xaml.Editors"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Grid.DataContext>
+            <local:SegmentedViewModel/>
+        </Grid.DataContext>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Margin="0,40,0,0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock>Segmented control using string collection</TextBlock>
+            <syncfusion:SfSegmentedControl x:Name="segmentWithString" 
+                                    Margin="0,20,0,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    SelectedIndex="2"
+                                    ItemsSource="{Binding StringCollection}">
+            </syncfusion:SfSegmentedControl>
+        </StackPanel>
+
+        <StackPanel Margin="0,40,0,0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock>Segmented control using ItemTemplate</TextBlock>
+            <syncfusion:SfSegmentedControl x:Name="segmentWithItemTemplate"
+                                    Margin="0,20,0,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    SelectedIndex="2"
+                                    ItemsSource="{Binding Days}">
+                <syncfusion:SfSegmentedControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <TextBlock Text="{Binding Name}"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </syncfusion:SfSegmentedControl.ItemTemplate>
+            </syncfusion:SfSegmentedControl>
+        </StackPanel>
+
+        <StackPanel Margin="0,40,0,0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock>Segmented control using DisplayMemberPath</TextBlock>
+            <syncfusion:SfSegmentedControl x:Name="segmentWithDisplayMemberPath"
+                                    Margin="0,20,0,0"       
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    SelectedIndex="2"
+                                    DisplayMemberPath="Name"
+                                    ItemsSource="{Binding Days}">
+            </syncfusion:SfSegmentedControl>
+        </StackPanel>
+    </Grid>
+</Window>
