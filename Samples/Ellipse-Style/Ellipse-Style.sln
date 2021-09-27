@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.223
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "Ellipse-Style (Package)", "Ellipse-Style (Package)\Ellipse-Style (Package).wapproj", "{B187F294-182A-4B45-8A05-A4605420E994}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ellipse-Style", "Ellipse-Style\Ellipse-Style.csproj", "{441E3EB4-114E-4680-BDDE-B4C56C2C0B41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|arm64 = Debug|arm64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|arm64 = Release|arm64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B187F294-182A-4B45-8A05-A4605420E994}.Debug|arm64.ActiveCfg = Debug|arm64
+		{B187F294-182A-4B45-8A05-A4605420E994}.Debug|arm64.Build.0 = Debug|arm64
+		{B187F294-182A-4B45-8A05-A4605420E994}.Debug|arm64.Deploy.0 = Debug|arm64
+		{B187F294-182A-4B45-8A05-A4605420E994}.Debug|x64.ActiveCfg = Debug|x64
+		{B187F294-182A-4B45-8A05-A4605420E994}.Debug|x64.Build.0 = Debug|x64
+		{B187F294-182A-4B45-8A05-A4605420E994}.Debug|x64.Deploy.0 = Debug|x64
+		{B187F294-182A-4B45-8A05-A4605420E994}.Debug|x86.ActiveCfg = Debug|x86
+		{B187F294-182A-4B45-8A05-A4605420E994}.Debug|x86.Build.0 = Debug|x86
+		{B187F294-182A-4B45-8A05-A4605420E994}.Debug|x86.Deploy.0 = Debug|x86
+		{B187F294-182A-4B45-8A05-A4605420E994}.Release|arm64.ActiveCfg = Release|arm64
+		{B187F294-182A-4B45-8A05-A4605420E994}.Release|arm64.Build.0 = Release|arm64
+		{B187F294-182A-4B45-8A05-A4605420E994}.Release|arm64.Deploy.0 = Release|arm64
+		{B187F294-182A-4B45-8A05-A4605420E994}.Release|x64.ActiveCfg = Release|x64
+		{B187F294-182A-4B45-8A05-A4605420E994}.Release|x64.Build.0 = Release|x64
+		{B187F294-182A-4B45-8A05-A4605420E994}.Release|x64.Deploy.0 = Release|x64
+		{B187F294-182A-4B45-8A05-A4605420E994}.Release|x86.ActiveCfg = Release|x86
+		{B187F294-182A-4B45-8A05-A4605420E994}.Release|x86.Build.0 = Release|x86
+		{B187F294-182A-4B45-8A05-A4605420E994}.Release|x86.Deploy.0 = Release|x86
+		{441E3EB4-114E-4680-BDDE-B4C56C2C0B41}.Debug|arm64.ActiveCfg = Debug|arm64
+		{441E3EB4-114E-4680-BDDE-B4C56C2C0B41}.Debug|arm64.Build.0 = Debug|arm64
+		{441E3EB4-114E-4680-BDDE-B4C56C2C0B41}.Debug|x64.ActiveCfg = Debug|x64
+		{441E3EB4-114E-4680-BDDE-B4C56C2C0B41}.Debug|x64.Build.0 = Debug|x64
+		{441E3EB4-114E-4680-BDDE-B4C56C2C0B41}.Debug|x86.ActiveCfg = Debug|x86
+		{441E3EB4-114E-4680-BDDE-B4C56C2C0B41}.Debug|x86.Build.0 = Debug|x86
+		{441E3EB4-114E-4680-BDDE-B4C56C2C0B41}.Release|arm64.ActiveCfg = Release|arm64
+		{441E3EB4-114E-4680-BDDE-B4C56C2C0B41}.Release|arm64.Build.0 = Release|arm64
+		{441E3EB4-114E-4680-BDDE-B4C56C2C0B41}.Release|x64.ActiveCfg = Release|x64
+		{441E3EB4-114E-4680-BDDE-B4C56C2C0B41}.Release|x64.Build.0 = Release|x64
+		{441E3EB4-114E-4680-BDDE-B4C56C2C0B41}.Release|x86.ActiveCfg = Release|x86
+		{441E3EB4-114E-4680-BDDE-B4C56C2C0B41}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {103C13EE-296E-4B85-8DE0-4D80DC6DE55D}
+	EndGlobalSection
+EndGlobal
