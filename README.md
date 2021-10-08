@@ -16,7 +16,7 @@ This repository contains samples that demonstrate built-in functionalities and v
 
 * **<a href="Samples/Getting-Started">Getting Started</a>** - This demo explains how to bind the data using both string collection and business objects.
 
-![WinUI Segmented Control with data binding](Samples/Getting-Started/Images/Output.png)
+![WinUI Segmented Control with data binding](Samples/Getting-Started/Images/Output1.png)
 
 * **<a href="Samples/Image-with-text">Image with text</a>** - This demo explains how to customize the image with text style using ItemTemplate in Segmented Control.
 
