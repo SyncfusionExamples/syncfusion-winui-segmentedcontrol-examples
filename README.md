@@ -37,3 +37,7 @@ This repository contains samples that demonstrate built-in functionalities and v
 * **<a href="Samples/ItemTemplateSelector">ItemTemplateSelector</a>** - This demo explains how to customize the segmented control using ItemTemplateSelector property.
 
 ![WinUI Segmented Control with ItemTemplateSelector](Samples/ItemTemplateSelector/Images/Output1.png)
+
+* **<a href="Samples/ItemContainerStyleSelector">ItemContainerStyleSelector</a>** - This demo explains how to customize the segmented control using ItemContainerStyleSelector property.
+
+![WinUI Segmented Control with ItemContainerStyleSelector](Samples/ItemContainerStyleSelector/Images/Output1.png)
