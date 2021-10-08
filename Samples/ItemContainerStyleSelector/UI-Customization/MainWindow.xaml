@@ -1,0 +1,72 @@
+<Window
+    x:Class="UI_Customization.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UI_Customization"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:syncfusion="using:Syncfusion.UI.Xaml.Editors" xmlns:local1="using:SelectionStyle"
+    mc:Ignorable="d">
+
+    <Grid x:Name="Root_Grid">
+        <Grid.DataContext>
+            <local1:SegmentedViewModel/>
+        </Grid.DataContext>
+        <Grid.Resources>
+            <Style TargetType="Border" x:Key="ellipse" >
+                <Setter Property = "Background" Value="DarkGreen"/>
+            </Style>
+            <Style x:Key="averageRatingStyle" TargetType="syncfusion:SfSegmentedItem">
+                <Setter Property = "Margin" Value="5,5,5,5" />
+                <Setter Property = "Background" Value="Red" />
+            </Style>
+            <Style x:Key="defaultStyle" TargetType="syncfusion:SfSegmentedItem">
+                <Setter Property = "Margin" Value="5,5,5,5" />
+                <Setter Property = "Background" Value="Yellow" />
+            </Style>
+
+            <local:RatingStyleSelector x:Key="ratingStyleSelector" 
+                        AverageRatingStyle="{StaticResource averageRatingStyle}"
+                        DefaultStyle="{StaticResource defaultStyle}"/>
+
+        </Grid.Resources>
+
+        <syncfusion:SfSegmentedControl
+            x:Name="segmentedcontrol"
+            SelectedIndex="2"
+            SelectionAnimationType="None"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"
+            ItemBorderThickness="2"
+            BorderThickness="0"
+            ItemsSource="{Binding Days}" 
+            ItemContainerStyleSelector="{StaticResource ratingStyleSelector}"
+            SelectedSegmentStyle="{StaticResource ellipse}">
+            <syncfusion:SfSegmentedControl.Resources>
+                <ResourceDictionary>
+                    <ResourceDictionary.ThemeDictionaries>
+                        <ResourceDictionary x:Key="Light">
+                            <SolidColorBrush x:Key="SyncfusionSegmentedItemBackground" Color="DarkSeaGreen"/>
+                            <SolidColorBrush x:Key="SyncfusionSegmentedItemHoverBackground" Color="Olive"/>
+                            <SolidColorBrush x:Key="SyncfusionSegmentedItemPressedBackground" Color="Olive"/>
+                            <SolidColorBrush x:Key="SyncfusionSegmentedItemSelectedHoverBackground" Color="Olive"/>
+                        </ResourceDictionary>
+                        <ResourceDictionary x:Key="Dark">
+                            <SolidColorBrush x:Key="SyncfusionSegmentedItemBackground" Color="DarkSeaGreen"/>
+                            <SolidColorBrush x:Key="SyncfusionSegmentedItemHoverBackground" Color="Olive"/>
+                            <SolidColorBrush x:Key="SyncfusionSegmentedItemPressedBackground" Color="Olive"/>
+                            <SolidColorBrush x:Key="SyncfusionSegmentedItemSelectedHoverBackground" Color="Olive"/>
+                        </ResourceDictionary>
+                    </ResourceDictionary.ThemeDictionaries>
+                </ResourceDictionary>
+            </syncfusion:SfSegmentedControl.Resources>
+            <syncfusion:SfSegmentedControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock Text = "{Binding Name}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </syncfusion:SfSegmentedControl.ItemTemplate>
+        </syncfusion:SfSegmentedControl>
+    </Grid>
+</Window>
