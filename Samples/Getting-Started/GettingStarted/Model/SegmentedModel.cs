@@ -1,4 +1,5 @@
-﻿using System;
+using Microsoft.UI.Xaml.Media;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -10,11 +11,28 @@ namespace GettingStarted
     public class SegmentedModel : INotifyPropertyChanged
     {
         private string name;
+        
 
         public string Name
         {
             get { return name; }
             set { name = value; OnPropertyChanged("Name"); }
+        }
+
+
+        private string icon;
+        public string Icon
+        {
+            get { return icon; }
+            set { icon = value; OnPropertyChanged("Icon"); }
+        }
+
+        private Brush background;
+
+        public Brush Background
+        {
+            get { return background; }
+            set { background = value; OnPropertyChanged("Background"); }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
