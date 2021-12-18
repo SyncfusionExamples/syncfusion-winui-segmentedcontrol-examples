@@ -42,6 +42,6 @@ This repository contains samples that demonstrate built-in functionalities and v
 
 ![WinUI Segmented Control with ItemContainerStyleSelector](Samples/ItemContainerStyleSelector/Images/Output.png)
 
-* **<a href="Samples/Shadow-effect">Shadow effect</a>** - This demo explains how to enable a shadow effect for selected segment item.
+* **<a href="Samples/Shadow-effect">Shadow effect</a>** - This demo explains how to enable a shadow effect for selected segment items.
 
 ![WinUI Segmented Control with shadow effect](Samples/Shadow-effect/Images/Output.png)
