@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Shadow-effect (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Shadow-effect (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
