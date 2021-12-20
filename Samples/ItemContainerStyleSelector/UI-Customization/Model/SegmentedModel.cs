@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SelectionStyle
+namespace UI_Customization
 {
     public class SegmentedModel : INotifyPropertyChanged
     {

@@ -8,12 +8,12 @@
     xmlns:syncfusion="using:Syncfusion.UI.Xaml.Editors"
     mc:Ignorable="d">
 
-    <Grid x:Name="Root_Grid">
+    <Grid x:Name="rootGrid">
         <Grid.DataContext>
             <local:SegmentedViewModel/>
         </Grid.DataContext>
         <Grid.Resources>
-            <DataTemplate x:Key="selectedtemplate">
+            <DataTemplate x:Key="selectedTemplate">
                 <StackPanel Orientation="Horizontal">
                     <Path Data="{Binding Icon}" Stretch="Uniform" 
                                   Fill="{Binding Background}" 
@@ -32,23 +32,23 @@
                                        Margin="6,0,0,0"/>
                 </StackPanel>
             </DataTemplate>
-            <DataTemplate x:Key="childTemplate">
+            <DataTemplate x:Key="defaultTemplate">
                 <StackPanel Orientation = "Horizontal" >
                     <TextBlock Margin="5"
                               VerticalAlignment="Center"
                               Text="{Binding Name}" />
                 </StackPanel>
             </DataTemplate>
-            <local:ItemTemplateSelector x:Key="templateselector" 
-                                       SelectedTemplate="{StaticResource selectedtemplate}" 
-                                       ChildTemplate="{StaticResource childTemplate}"/>
+            <local:ItemTemplateSelector x:Key="templateSelector" 
+                                       SelectedTemplate="{StaticResource selectedTemplate}" 
+                                       DefaultTemplate="{StaticResource defaultTemplate}"/>
         </Grid.Resources>
 
         <syncfusion:SfSegmentedControl Name="segmentedControl" 
                             ItemsSource="{Binding Items}"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
-                            ItemTemplateSelector="{StaticResource templateselector}" />
+                            ItemTemplateSelector="{StaticResource templateSelector}" />
 
     </Grid>
 </Window>

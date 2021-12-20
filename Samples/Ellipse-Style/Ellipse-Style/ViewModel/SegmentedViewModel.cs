@@ -10,12 +10,12 @@ namespace Ellipse_Style
     {
         public SegmentedViewModel()
         {
-            Backlight = new List<SegmentedModel>();
-            Backlight.Add(new SegmentedModel() { Name = "Backlight On" });
-            Backlight.Add(new SegmentedModel() { Name = "Backlight Off" });
+            Items = new List<SegmentedModel>();
+            Items.Add(new SegmentedModel() { Name = "Backlight On" });
+            Items.Add(new SegmentedModel() { Name = "Backlight Off" });
         }
 
-        public List<SegmentedModel> Backlight
+        public List<SegmentedModel> Items
         {
             get; set;
         }

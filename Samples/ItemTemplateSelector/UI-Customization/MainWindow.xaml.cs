@@ -33,7 +33,7 @@ namespace UI_Customization
     class ItemTemplateSelector : DataTemplateSelector
     {
         public DataTemplate SelectedTemplate { get; set; }
-        public DataTemplate ChildTemplate { get; set; }
+        public DataTemplate DefaultTemplate { get; set; }
         protected override DataTemplate SelectTemplateCore(object item, DependencyObject container)
         {
             if (container == null)
@@ -41,7 +41,7 @@ namespace UI_Customization
             if ((container as SfSegmentedItem).IsSelected)
                 return SelectedTemplate;
             else
-                return ChildTemplate;
+                return DefaultTemplate;
         }
     }
 }

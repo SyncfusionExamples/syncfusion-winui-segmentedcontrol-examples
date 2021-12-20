@@ -27,7 +27,6 @@ namespace GettingStarted
         public MainWindow()
         {
             this.InitializeComponent();
-            segmentWithString.ItemsSource = new List<string>() { "Day", "Week", "Month", "Year" };
         }
        
     }
