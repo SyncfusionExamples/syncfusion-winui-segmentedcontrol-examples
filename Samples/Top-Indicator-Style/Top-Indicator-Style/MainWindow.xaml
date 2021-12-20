@@ -8,7 +8,7 @@
     xmlns:syncfusion="using:Syncfusion.UI.Xaml.Editors"
     mc:Ignorable="d">
 
-    <Grid x:Name="Root_Grid">
+    <Grid>
         <Grid.DataContext>
             <local:SegmentedViewModel/>
         </Grid.DataContext>
@@ -22,7 +22,7 @@
                         <SolidColorBrush x:Key="SelectedBorderBrush" Color="Red"/>
                     </ResourceDictionary>
                 </ResourceDictionary.ThemeDictionaries>
-                <Style TargetType="Border" x:Key="topBorderStyle" >
+                <Style TargetType="syncfusion:SelectedSegmentBorder" x:Key="topBorderStyle" >
                     <Setter Property="Margin" Value="0,-6,0,0" />
                     <Setter Property="BorderThickness" Value="0,4,0,0" />
                     <Setter Property="BorderBrush" Value="{ThemeResource SelectedBorderBrush}" />

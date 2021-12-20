@@ -8,28 +8,11 @@
     xmlns:syncfusion="using:Syncfusion.UI.Xaml.Editors"
     mc:Ignorable="d">
 
-    <Grid x:Name="Root_Grid">
+    <Grid>
         <Grid.DataContext>
             <local:SegmentedViewModel/>
         </Grid.DataContext>
-        
-        <Grid.Resources>
-            <ResourceDictionary>
-                <ResourceDictionary.ThemeDictionaries>
-                    <ResourceDictionary x:Key="Light">
-                        <SolidColorBrush x:Key="SelectedBackground" Color="#6C58EA"/>
-                    </ResourceDictionary>
-                    <ResourceDictionary x:Key="Dark">
-                        <SolidColorBrush x:Key="SelectedBackground" Color="#08B2A8"/>
-                    </ResourceDictionary>
-                </ResourceDictionary.ThemeDictionaries>
-                <Style TargetType="Border" x:Key="shirtModelStyle">
-                    <Setter Property="CornerRadius" Value="4"/>
-                    <Setter Property="Background" Value="{ThemeResource SelectedBackground}"/>
-                </Style>
-            </ResourceDictionary>
-        </Grid.Resources>
-        
+                
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -46,16 +29,8 @@
                                     VerticalAlignment="Center"
                                     BorderThickness="3"
                                     ItemBorderThickness="0"
+                                    DisplayMemberPath="Name"   
                                     ItemsSource="{Binding Days}">
-                <syncfusion:SfSegmentedControl.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <TextBlock Text="{Binding Name}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"/>
-                        </Grid>
-                    </DataTemplate>
-                </syncfusion:SfSegmentedControl.ItemTemplate>
             </syncfusion:SfSegmentedControl>
         </StackPanel>
 
@@ -67,21 +42,14 @@
                                     VerticalAlignment="Center"
                                     BorderThickness="0"
                                     ItemBorderThickness="1"
+                                    DisplayMemberPath="Name"
+                                    SelectionAnimationType="None"       
                                     ItemsSource="{Binding Days}">
                 <syncfusion:SfSegmentedControl.ItemContainerStyle>
                     <Style TargetType="syncfusion:SfSegmentedItem">
                         <Setter Property="Margin" Value="3" />
                     </Style>
                 </syncfusion:SfSegmentedControl.ItemContainerStyle>
-                <syncfusion:SfSegmentedControl.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <TextBlock Text="{Binding Name}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"/>
-                        </Grid>
-                    </DataTemplate>
-                </syncfusion:SfSegmentedControl.ItemTemplate>
             </syncfusion:SfSegmentedControl>
         </StackPanel>
 
@@ -92,16 +60,8 @@
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
                                     CornerRadius="5"
+                                    DisplayMemberPath="Name"          
                                     ItemsSource="{Binding Days}">
-                <syncfusion:SfSegmentedControl.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <TextBlock Text="{Binding Name}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"/>
-                        </Grid>
-                    </DataTemplate>
-                </syncfusion:SfSegmentedControl.ItemTemplate>
             </syncfusion:SfSegmentedControl>
         </StackPanel>
 
@@ -111,37 +71,25 @@
                                     Margin="0,20,0,0"       
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
-                                    BorderBrush="Red"       
+                                    BorderBrush="Red"
+                                    DisplayMemberPath="Name"          
                                     ItemsSource="{Binding Days}">
                 <syncfusion:SfSegmentedControl.ItemContainerStyle>
                     <Style TargetType="syncfusion:SfSegmentedItem">
                         <Setter Property="BorderBrush" Value="Red" />
                     </Style>
                 </syncfusion:SfSegmentedControl.ItemContainerStyle>
-                <syncfusion:SfSegmentedControl.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <TextBlock Text="{Binding Name}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"/>
-                        </Grid>
-                    </DataTemplate>
-                </syncfusion:SfSegmentedControl.ItemTemplate>
             </syncfusion:SfSegmentedControl>
         </StackPanel>
 
         <StackPanel Margin="0,40,0,0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock>Segmented control customization using keys</TextBlock>
             <syncfusion:SfSegmentedControl x:Name="segmentWithKeys"
-                                    Margin="0,20,0,0"              
-                                    Height="40"   
+                                    Margin="0,20,0,0"  
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
                                     SelectedIndex="2"
-                                    CornerRadius="4"
-                                    BorderThickness="2"
-                                    ItemBorderThickness="0"
-                                    SelectedSegmentStyle="{StaticResource shirtModelStyle}"
+                                    DisplayMemberPath="Name"
                                     ItemsSource="{Binding ShirtModels}">
                 <syncfusion:SfSegmentedControl.Resources>
                     <ResourceDictionary>
@@ -173,21 +121,6 @@
                         </ResourceDictionary.ThemeDictionaries>
                     </ResourceDictionary>
                 </syncfusion:SfSegmentedControl.Resources>
-                <syncfusion:SfSegmentedControl.ItemContainerStyle>
-                    <Style TargetType="syncfusion:SfSegmentedItem">
-                        <Setter Property="Margin" Value="3" />
-                        <Setter Property="CornerRadius" Value="4" />
-                    </Style>
-                </syncfusion:SfSegmentedControl.ItemContainerStyle>
-                <syncfusion:SfSegmentedControl.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <TextBlock Text="{Binding Name}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"/>
-                        </Grid>
-                    </DataTemplate>
-                </syncfusion:SfSegmentedControl.ItemTemplate>
             </syncfusion:SfSegmentedControl>
         </StackPanel>
     </Grid>

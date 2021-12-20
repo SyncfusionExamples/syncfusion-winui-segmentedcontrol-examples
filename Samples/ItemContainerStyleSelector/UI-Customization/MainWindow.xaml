@@ -5,15 +5,15 @@
     xmlns:local="using:UI_Customization"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-    xmlns:syncfusion="using:Syncfusion.UI.Xaml.Editors" xmlns:local1="using:SelectionStyle"
+    xmlns:syncfusion="using:Syncfusion.UI.Xaml.Editors" 
     mc:Ignorable="d">
 
-    <Grid x:Name="Root_Grid">
+    <Grid>
         <Grid.DataContext>
-            <local1:SegmentedViewModel/>
+            <local:SegmentedViewModel/>
         </Grid.DataContext>
         <Grid.Resources>
-            <Style TargetType="Border" x:Key="ellipse" >
+            <Style TargetType="syncfusion:SelectedSegmentBorder" x:Key="ellipse" >
                 <Setter Property = "Background" Value="DarkGreen"/>
             </Style>
             <Style x:Key="averageRatingStyle" TargetType="syncfusion:SfSegmentedItem">
@@ -39,6 +39,7 @@
             VerticalAlignment="Center"
             ItemBorderThickness="2"
             BorderThickness="0"
+            DisplayMemberPath="Name" 
             ItemsSource="{Binding Days}" 
             ItemContainerStyleSelector="{StaticResource ratingStyleSelector}"
             SelectedSegmentStyle="{StaticResource ellipse}">
@@ -60,13 +61,6 @@
                     </ResourceDictionary.ThemeDictionaries>
                 </ResourceDictionary>
             </syncfusion:SfSegmentedControl.Resources>
-            <syncfusion:SfSegmentedControl.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <TextBlock Text = "{Binding Name}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    </Grid>
-                </DataTemplate>
-            </syncfusion:SfSegmentedControl.ItemTemplate>
         </syncfusion:SfSegmentedControl>
     </Grid>
 </Window>

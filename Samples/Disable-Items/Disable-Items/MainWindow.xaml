@@ -13,21 +13,13 @@
         </Grid.DataContext>
 
         <StackPanel Margin="0,40,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock>Segmented control with Disabled items</TextBlock>
+            <TextBlock>Segmented control with disabled items</TextBlock>
             <syncfusion:SfSegmentedControl x:Name="segmentWithDisabled"
                                     Margin="0,20,0,0"       
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
+                                    DisplayMemberPath="Name"       
                                     ItemsSource="{Binding Days}">
-                <syncfusion:SfSegmentedControl.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <TextBlock Text="{Binding Name}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"/>
-                        </Grid>
-                    </DataTemplate>
-                </syncfusion:SfSegmentedControl.ItemTemplate>
             </syncfusion:SfSegmentedControl>
         </StackPanel>
     </Grid>

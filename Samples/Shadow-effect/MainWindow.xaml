@@ -8,7 +8,7 @@
     xmlns:syncfusion="using:Syncfusion.UI.Xaml.Editors"
     mc:Ignorable="d">
     
-    <Grid x:Name="rootGrid">
+    <Grid>
         <Grid.DataContext>
             <local:SegmentedViewModel/>
         </Grid.DataContext>
@@ -41,6 +41,7 @@
                                     CornerRadius="4"
                                     BorderThickness="2"
                                     ItemBorderThickness="0"
+                                    DisplayMemberPath="Name"       
                                     SelectedSegmentStyle="{StaticResource shirtModelStyle}"
                                     ItemsSource="{Binding ShirtModels}">
                 <syncfusion:SfSegmentedControl.Resources>
@@ -79,15 +80,6 @@
                         <Setter Property="CornerRadius" Value="4" />
                     </Style>
                 </syncfusion:SfSegmentedControl.ItemContainerStyle>
-                <syncfusion:SfSegmentedControl.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <TextBlock Text="{Binding Name}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"/>
-                        </Grid>
-                    </DataTemplate>
-                </syncfusion:SfSegmentedControl.ItemTemplate>
             </syncfusion:SfSegmentedControl>
         </StackPanel>
     </Grid>

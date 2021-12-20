@@ -25,6 +25,10 @@
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
                                     SelectedIndex="2" >
+                <x:String>Day</x:String>
+                <x:String>Week</x:String>
+                <x:String>Month</x:String>
+                <x:String>Year</x:String>
             </syncfusion:SfSegmentedControl>
         </StackPanel>
 

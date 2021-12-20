@@ -8,12 +8,12 @@
     xmlns:syncfusion="using:Syncfusion.UI.Xaml.Editors"
     mc:Ignorable="d">
 
-    <Grid x:Name="Root_Grid">
+    <Grid>
         <Grid.DataContext>
             <local:SegmentedViewModel/>
         </Grid.DataContext>
         <Grid.Resources>
-            <Style TargetType="Border" x:Key="backLightStyle" >
+            <Style TargetType="syncfusion:SelectedSegmentBorder" x:Key="backlightStyle" >
                 <Setter Property="CornerRadius" Value="25" />
                 <Setter Property="Background" Value="#ffe521"/>
             </Style>
@@ -29,12 +29,24 @@
                             CornerRadius="25"
                             ItemBorderThickness="0"
                             SelectedIndex="0" 
-                            SelectedSegmentStyle="{StaticResource backLightStyle}"
-                            ItemsSource="{Binding Backlight}">
+                            DisplayMemberPath="Name"               
+                            SelectedSegmentStyle="{StaticResource backlightStyle}"
+                            ItemsSource="{Binding Items}">
                 <syncfusion:SfSegmentedControl.Resources>
                     <ResourceDictionary>
                         <ResourceDictionary.ThemeDictionaries>
                             <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="SyncfusionSegmentedControlBackground" Color="#464646"/>
+                                <SolidColorBrush x:Key="SyncfusionSegmentedItemBackground" Color="#464646"/>
+                                <SolidColorBrush x:Key="SyncfusionSegmentedItemHoverBackground" Color="#464646"/>
+                                <SolidColorBrush x:Key="SyncfusionSegmentedItemSelectedHoverBackground" Color="#ffe521"/>
+                                <SolidColorBrush x:Key="SyncfusionSegmentedItemForeground" Color="White"/>
+                                <SolidColorBrush x:Key="SyncfusionSegmentedItemHoverForeground" Color="White"/>
+                                <SolidColorBrush x:Key="SyncfusionSegmentedItemSelectedForeground" Color="#464646"/>
+                                <SolidColorBrush x:Key="SyncfusionSegmentedItemSelectedHoverForeground" Color="#464646"/>
+                                <SolidColorBrush x:Key="SyncfusionSegmentedControlBorderBrush" Color="#464646"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Dark">
                                 <SolidColorBrush x:Key="SyncfusionSegmentedControlBackground" Color="#464646"/>
                                 <SolidColorBrush x:Key="SyncfusionSegmentedItemBackground" Color="#464646"/>
                                 <SolidColorBrush x:Key="SyncfusionSegmentedItemHoverBackground" Color="#464646"/>
@@ -53,15 +65,6 @@
                         <Setter Property="CornerRadius" Value="25"/>
                     </Style>
                 </syncfusion:SfSegmentedControl.ItemContainerStyle>
-                <syncfusion:SfSegmentedControl.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <TextBlock Text="{Binding Name}" 
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"/>
-                        </Grid>
-                    </DataTemplate>
-                </syncfusion:SfSegmentedControl.ItemTemplate>
             </syncfusion:SfSegmentedControl>
         </StackPanel>
     </Grid>
