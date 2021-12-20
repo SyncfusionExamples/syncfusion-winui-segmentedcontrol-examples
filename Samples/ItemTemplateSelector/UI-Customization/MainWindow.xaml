@@ -8,7 +8,7 @@
     xmlns:syncfusion="using:Syncfusion.UI.Xaml.Editors"
     mc:Ignorable="d">
 
-    <Grid x:Name="rootGrid">
+    <Grid>
         <Grid.DataContext>
             <local:SegmentedViewModel/>
         </Grid.DataContext>

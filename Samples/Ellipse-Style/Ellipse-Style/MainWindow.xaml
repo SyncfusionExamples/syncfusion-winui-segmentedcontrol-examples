@@ -8,12 +8,12 @@
     xmlns:syncfusion="using:Syncfusion.UI.Xaml.Editors"
     mc:Ignorable="d">
 
-    <Grid x:Name="Root_Grid">
+    <Grid>
         <Grid.DataContext>
             <local:SegmentedViewModel/>
         </Grid.DataContext>
         <Grid.Resources>
-            <Style TargetType="syncfusion:SelectedSegmentBorder" x:Key="backLightStyle" >
+            <Style TargetType="syncfusion:SelectedSegmentBorder" x:Key="backlightStyle" >
                 <Setter Property="CornerRadius" Value="25" />
                 <Setter Property="Background" Value="#ffe521"/>
             </Style>
@@ -30,7 +30,7 @@
                             ItemBorderThickness="0"
                             SelectedIndex="0" 
                             DisplayMemberPath="Name"               
-                            SelectedSegmentStyle="{StaticResource backLightStyle}"
+                            SelectedSegmentStyle="{StaticResource backlightStyle}"
                             ItemsSource="{Binding Items}">
                 <syncfusion:SfSegmentedControl.Resources>
                     <ResourceDictionary>
